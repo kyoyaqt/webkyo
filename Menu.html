@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Restoran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page">
+    <h1>Menu Makanan dan Minuman</h1>
+
+    <div id="containerMenu" class="container"></div>
+
+    <div class="keranjang">
+        <h2>Keranjang</h2>
+        <p id="infoMeja" class="table-info"></p>
+        <ul id="daftarKeranjang"></ul>
+        <h3>Total: Rp <span id="total">0</span></h3>
+        <button id="btnBayar" class="btn-bayar" onclick="bayarKeranjang()">Bayar</button>
+        <div id="statusPesananPelanggan" class="customer-status"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

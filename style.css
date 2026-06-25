@@ -8,6 +8,28 @@ h1 {
     text-align: center;
 }
 
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-nav {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1f7a4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: #166539;
+}
+
 .keranjang,
 .admin-form,
 .admin-list {
