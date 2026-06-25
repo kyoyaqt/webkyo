@@ -1,0 +1,30 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "public": ".",
+  "rewrites": [
+    {
+      "source": "/Menu.html",
+      "destination": "/Menu.html"
+    },
+    {
+      "source": "/kasir.html",
+      "destination": "/kasir.html"
+    },
+    {
+      "source": "/admin.html",
+      "destination": "/admin.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}
