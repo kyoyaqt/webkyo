@@ -1,0 +1,433 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.keranjang,
+.admin-form,
+.admin-list {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.index-page .keranjang {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 0;
+    text-align: left;
+    position: sticky;
+    bottom: 20px;
+    z-index: 10;
+}
+
+.container,
+.admin-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card,
+.admin-card {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-image,
+.admin-card-image,
+.image-preview {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #eee;
+}
+
+.admin-card-image {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.image-preview {
+    display: none;
+    max-width: 250px;
+}
+
+.harga {
+    color: green;
+    font-weight: bold;
+}
+
+.kontrol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.kontrol button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.kontrol button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.kontrol span {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 25px;
+    text-align: center;
+}
+
+.admin-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-main {
+    display: grid;
+    gap: 20px;
+}
+
+.admin-form {
+    display: grid;
+    gap: 10px;
+}
+
+.admin-form label {
+    font-weight: bold;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.admin-form button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #1f7a4d;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.admin-card {
+    text-align: left;
+}
+
+.admin-card span {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #1f7a4d;
+}
+
+.btn-hapus-menu {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #dc2626;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-hapus-menu:hover {
+    background: #b91c1c;
+}
+
+.btn-bayar {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #1f7a4d;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-bayar:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.customer-status {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #ddd;
+}
+
+.table-info {
+    padding: 10px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    font-weight: bold;
+}
+
+.customer-status h3 {
+    margin: 0 0 8px;
+}
+
+.customer-status p {
+    margin: 6px 0;
+}
+
+.kasir-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.kasir-panel,
+.report-panel {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 20px;
+    z-index: 8;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.report-card {
+    padding: 14px;
+    border-radius: 8px;
+    background: #f3f4f6;
+}
+
+.report-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+.report-card strong {
+    font-size: 22px;
+}
+
+.report-status {
+    display: grid;
+    gap: 8px;
+}
+
+.report-status p {
+    margin: 0;
+}
+
+.qr-result {
+    margin-top: 12px;
+}
+
+.qr-card {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    padding: 14px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    text-align: center;
+}
+
+.qr-card h3,
+.qr-card p {
+    margin: 0;
+}
+
+.qr-card img {
+    width: 240px;
+    height: 240px;
+    max-width: 100%;
+}
+
+.qr-card button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.order-list {
+    display: grid;
+    gap: 16px;
+}
+
+.order-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.order-card h3 {
+    margin-top: 0;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-pending {
+    background: #d97706;
+}
+
+.status-diproses {
+    background: #2563eb;
+}
+
+.status-pengantaran {
+    background: #7c3aed;
+}
+
+.status-selesai {
+    background: #16a34a;
+}
+
+.status-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.status-actions button {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.status-actions button:hover {
+    background: #111;
+}
+
+.print-area {
+    display: none;
+}
+
+.receipt {
+    color: #111;
+    font-family: Arial, sans-serif;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.receipt h2,
+.receipt p {
+    text-align: center;
+}
+
+.receipt table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+
+.receipt th,
+.receipt td {
+    padding: 6px 4px;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    text-align: left;
+}
+
+.receipt th:nth-child(2),
+.receipt td:nth-child(2) {
+    text-align: center;
+}
+
+.receipt-total {
+    font-size: 16px;
+}
+
+.receipt-footer {
+    margin-top: 20px;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .print-area,
+    .print-area * {
+        visibility: visible;
+    }
+
+    .print-area {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    body {
+        background: white;
+        padding: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .admin-layout,
+    .kasir-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .report-panel {
+        position: static;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Restoran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="kasir-page">
+    <h1>Halaman Kasir</h1>
+
+    <main class="kasir-layout">
+        <section class="report-panel">
+            <h2>Laporan Kasir</h2>
+            <div id="laporanKasir" class="report-content"></div>
+        </section>
+
+        <section class="kasir-panel">
+            <h2>Daftar Pesanan</h2>
+            <div id="daftarPesanan" class="order-list"></div>
+        </section>
+    </main>
+
+    <div id="strukPrint" class="print-area"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

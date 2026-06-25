@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Admin Menu Restoran</h1>
+
+    <div class="admin-layout">
+        <section class="report-panel">
+            <h2>Laporan Penjualan</h2>
+            <div id="laporanAdmin" class="report-content"></div>
+        </section>
+
+        <div class="admin-main">
+            <section class="admin-form">
+                <h2>QR Code Meja</h2>
+                <label for="namaMeja">Nama Meja</label>
+                <input type="text" id="namaMeja" placeholder="Contoh: Meja 1">
+                <button type="button" onclick="generateQrMeja()">Generate QR</button>
+                <div id="hasilQrMeja" class="qr-result"></div>
+            </section>
+
+            <form id="formMenu" class="admin-form">
+                <h2>Tambah Menu</h2>
+                <label for="nama">Nama Menu</label>
+                <input type="text" id="nama" required>
+
+                <label for="deskripsi">Deskripsi</label>
+                <textarea id="deskripsi" rows="3" required></textarea>
+
+                <label for="harga">Harga</label>
+                <input type="number" id="harga" min="0" required>
+
+                <label for="gambar">Gambar Menu</label>
+                <select id="gambar">
+                    <option value="">Tanpa gambar</option>
+                </select>
+
+                <label for="gambarUrl">URL Gambar Cloudinary</label>
+                <input type="url" id="gambarUrl" placeholder="https://res.cloudinary.com/...">
+
+                <img id="previewGambar" class="image-preview" alt="Preview gambar menu">
+
+                <button type="submit">Simpan Menu</button>
+            </form>
+
+            <div class="admin-list">
+                <h2>Daftar Menu</h2>
+                <div id="daftarMenuAdmin" class="admin-items"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="qrPrintArea" class="print-area"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
