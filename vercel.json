@@ -2,18 +2,25 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "public": ".",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/Menu.html",
-      "destination": "/Menu.html"
+      "src": "^/Menu\\.html(?:\\?.*)?$",
+      "dest": "/Menu.html",
+      "methods": ["GET", "HEAD"]
     },
     {
-      "source": "/kasir.html",
-      "destination": "/kasir.html"
+      "src": "^/kasir\\.html(?:\\?.*)?$",
+      "dest": "/kasir.html",
+      "methods": ["GET", "HEAD"]
     },
     {
-      "source": "/admin.html",
-      "destination": "/admin.html"
+      "src": "^/admin\\.html(?:\\?.*)?$",
+      "dest": "/admin.html",
+      "methods": ["GET", "HEAD"]
+    },
+    {
+      "src": "/(.*)$",
+      "dest": "/$1"
     }
   ],
   "headers": [
