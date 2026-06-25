@@ -73,7 +73,7 @@ function generateQrMeja() {
     if (!input || !hasil) return;
     const namaMeja = input.value.trim();
     if (!namaMeja) return alert("Isi nama meja terlebih dahulu.");
-    const urlPelanggan = new URL("index.html", window.location.href);
+    const urlPelanggan = new URL("Menu.html", window.location.href);
     urlPelanggan.searchParams.set("meja", namaMeja);
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(urlPelanggan.href)}`;
     hasil.innerHTML = `<div class="qr-card"><h3>${namaMeja}</h3><img src="${qrUrl}" alt="QR Code ${namaMeja}"><p>${urlPelanggan.href}</p><button type="button" onclick="printQrMeja()">Print QR</button></div>`;
